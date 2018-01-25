@@ -1,16 +1,15 @@
 go-algorithms
 =============
+[origin](https://github.com/0xAX/go-algorithms)
 
 `go-algorithms` - implementation of different algorithms and data structures with `golang`.
 
 Usage
 -----
 
-1. Clone `https://github.com/0xAX/go-algorithms.git` repo, it must be in your `$GOPATH`.
+1. Clone repo, it must be in your `$GOPATH`.
 
-2. Execute `go build && go install` in `go-algorithms`
-
-3. Execute `go build bubble_sort.go` and `./bubble_sort`
+2. For example, in sorting folder execute `go run bubble_sort.go`
 
 Algorithms
 ----------
@@ -52,7 +51,7 @@ Contribution
   * Send pull request;
   * Thank you.
 
-Author
+Original Author
 ------
 
 [@0xAX](https://twitter.com/0xAX)
