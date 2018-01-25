@@ -7,7 +7,7 @@ package main
 import "fmt"
 import "math/rand"
 
-import "github.com/0xAX/go-algorithms"
+import "../utils"
 
 func quick_sort(arr []int) []int {
     

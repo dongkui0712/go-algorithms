@@ -6,7 +6,7 @@ package main
 
 import "fmt"
 
-import "github.com/0xAX/go-algorithms"
+import "../utils"
 
 func main() {
     arr := utils.RandArray(10)

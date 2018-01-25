@@ -6,7 +6,7 @@ package main
 
 import "fmt"
 
-import "github.com/0xAX/go-algorithms"
+import "../utils"
 
 func Merge(left, right []int) []int {
     result := make([]int, 0, len(left) + len(right))

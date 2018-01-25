@@ -6,40 +6,24 @@ package main
 
 import "fmt"
 
-import "github.com/0xAX/go-algorithms"
+import "../utils"
 
 func main() {
-    arr := utils.RandArray(10)
-    fmt.Println("Initial array is:", arr)
-    fmt.Println("")
-    
-    tmp := 0
-    gap := len(arr)
-    
-    for {
-        if gap > 1 {
-            gap = gap * 100 / 124
-        }
-        
-        for i := 0 ; ; {
-        
-            if arr[i] > arr[i + gap]  {         
-                tmp = arr[i]
-                arr[i] = arr[i + gap]
-                arr[i + gap] = tmp              
-            }
+	arr := utils.RandArray(10)
+	fmt.Printf("Initial array is: %v\n", arr)
 
-            i++
-            
-            if i + gap >= len(arr){
-                break
-            }
-        }
+	gap := len(arr)
 
-        if gap == 1 {
-            break
-        }
-    }
+	for gap > 1 {
+		gap = gap * 100 / 124
 
-    fmt.Println("Sorted array is: ", arr)
+		for i := 0; i+gap < len(arr); i++ {
+			if arr[i] > arr[i+gap] {
+				arr[i], arr[i+gap] = arr[i+gap], arr[i]
+			}
+		}
+		fmt.Printf("gap=[%d], arr: %v\n", gap, arr)
+	}
+
+	fmt.Println("Sorted array is: ", arr)
 }

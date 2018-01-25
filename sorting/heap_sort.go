@@ -6,7 +6,7 @@ package main
 
 import "fmt"
 
-import "github.com/0xAX/go-algorithms"
+import "../utils"
 
 func sift(arr []int, i int, arrLen int) []int {
     done := false

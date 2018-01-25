@@ -6,22 +6,18 @@ package main
 
 import "fmt"
 
-import "github.com/0xAX/go-algorithms"
+import "../utils"
 
 func main() {
 	arr := utils.RandArray(10)
     fmt.Println("Initial array is:", arr)
     fmt.Println("")
 	
-	i := 1
-	tmp := 0
-	for ; i < len(arr) ; {
+	for i := 1; i < len(arr); {
 		if arr[i] >= arr[i - 1] {
 			i++
 		} else {
-			tmp = arr[i]
-			arr[i] = arr[i - 1]
-			arr[i - 1] = tmp
+			arr[i], arr[i - 1] = arr[i - 1], arr[i]
 
 			if i > 1 {
 				i--
